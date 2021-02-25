@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Morse Code Translator</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="morse-code-translator.css"/>
+	</head>
+	<body class="translator">
+		<div class="translator__body">
+			<header class="translator__header">
+				<h1 class="translator__h1">Morse Code Translator</h1>
+			</header>
+			<div class="translator__main-body">
+				<input class="translator__input" type="text" placeholder="Enter Text" id="input" name="input"/>
+				<div class="translator__buttons">
+					<button class="translator__morse-button btn btn-primary" type="button" onclick="englishToMorse()">English to Morse</button>
+					<button class="translator__clear-button btn btn-warning" type="button" onclick="clearInputOutput()">Clear</button>
+					<button class="translator__english-button btn btn-primary" type="button" onclick="morseToEnglish()">Morse to English</button>
+				</div>
+				<p class="translator__output" id="output"></p>
+			</div>
+		</div>
+		<script src="morse-code-translator.js"></script>
+	</body>
+</html>

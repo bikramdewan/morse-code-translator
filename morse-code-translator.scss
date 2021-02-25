@@ -1,0 +1,86 @@
+
+.translator {
+	background: #1c1c1f;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0px;
+	padding: 0px;
+
+
+&__header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	max-width: 90%;
+	padding-top: 5vh;
+	margin: auto;
+}
+
+&__h1 {
+		font-family: 'Roboto', sans-serif;
+		font-size: 50px;
+		color: white;
+		margin: 30px;
+	}
+
+&__main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: center;
+	margin: 5% 20%;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+    padding: 5vh;
+}
+
+&__input {
+	color: black;
+	outline: none;
+	border-radius: 10px;
+	border: none;
+	font-size: 1.4rem;
+    text-align: center;
+    height: 45px;
+    width: 800px;
+	margin-bottom: 20px;
+}
+
+&__morse-button, &__english-button {
+	padding: 0 20px;
+	color: white;
+	background: #19474e;
+	font-size: 1.4rem;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+    text-align: center;
+	height: 60px;
+	width: 260px;
+    margin: 20px 20px;
+
+}
+
+&__clear-button {
+	padding: 0 20px;
+	color: white;
+	font-size: 1.4rem;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+    text-align: center;
+	height: 60px;
+	width: 200px;
+    margin: 20px 20px;
+}
+
+&__clear-button:hover{
+	color: red;
+	font-size: 1.4rem;
+}
+
+&__output {
+    color: white;
+    font-size: 1.4rem;
+}
+}
