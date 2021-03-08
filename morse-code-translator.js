@@ -85,40 +85,26 @@ const morse = {
 };
 
 
-const englishToMorse = () => {
-
-	//getting inputs from user
-    const userInput = document.getElementById("input").value; 
-	// converting to lowercase and separate char by putting default space (,) and retuns new array
-	const lowerCase = userInput.toLowerCase().split(''); 
-	// creating a new array with maping
-	const newArray = lowerCase.map((morse) => {  
-		// fetching value by passing the key 'morse'
+const englishToMorse = (englishInput) => {
+	const lowerCase = englishInput.toLowerCase().split(''); 
+	const morseArray = lowerCase.map(morse => {  
 		const morseLetter = alphabet[morse];
 		return morseLetter;
 	})
-	const translate = newArray.join(' '); // separate char and word by joining single space (' ') and returns string
-	document.getElementById("output").innerHTML = translate; // output result 
+	return morseArray.join(' '); 
 }
 
-const morseToEnglish = () =>{
-	//getting inputs from user 
-    const userInput = document.getElementById("input").value;  
-	// separate morse char by putting single space (' ') and returns string
-	const splitMorse = userInput.split(' '); 
-	// creating a new array with maping
-	const newArray = splitMorse.map((english) => { 
-		// fetching value by passing the key 'english' 
+const morseToEnglish = (morseInput) => {
+	const splitMorse = morseInput.split(' '); 
+	const englishArray = splitMorse.map((english) => { 
 		const englishLetter = morse[english];
 		return englishLetter;
 	})
-	const translate = newArray.join(''); // separate char and word by joining default space ('') and returns string 
+	return englishArray.join('');  
+}
+
+const addToDom = (translate) => {
 	document.getElementById("output").innerHTML = translate;
 }
 
-const clearInputOutput = () => {
-	document.getElementById("input").value = "";
-	document.getElementById("output").innerHTML = "";
-}
-
-
+module.exports = {englishToMorse, morseToEnglish, addToDom};

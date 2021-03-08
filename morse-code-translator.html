@@ -13,13 +13,15 @@
 			<div class="translator__main-body">
 				<input class="translator__input" type="text" placeholder="Enter Text" id="input" name="input"/>
 				<div class="translator__buttons">
-					<button class="translator__morse-button btn btn-primary" type="button" onclick="englishToMorse()">English to Morse</button>
-					<button class="translator__clear-button btn btn-warning" type="button" onclick="clearInputOutput()">Clear</button>
-					<button class="translator__english-button btn btn-primary" type="button" onclick="morseToEnglish()">Morse to English</button>
+					<button class="translator__morse-button btn btn-primary" type="button" id="english-morse">English to Morse</button>
+					<button class="translator__clear-button btn btn-warning" type="button" id="clear">Clear</button>
+					<button class="translator__english-button btn btn-primary" type="button" id="morse-english">Morse to English</button>
 				</div>
 				<p class="translator__output" id="output"></p>
 			</div>
 		</div>
 		<script src="morse-code-translator.js"></script>
+		<script src="user-input-output.js"></script>
+		</script>
 	</body>
 </html>
