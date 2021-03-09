@@ -14,4 +14,13 @@ describe('morse-code-translator', () => {
 	test('should handle English to Morse conversion', () => {
 		expect(englishToMorse('aA')).toBe('.- .-');
 	})
+
+	test("Should return a string", () => {
+		expect(typeof englishToMorse('abc') === "string").toBe(true);
+	});
+
+	test('Character does not exist in the dictionary', () => {
+		expect(morseToEnglish('......')).toBe('');
+		expect(englishToMorse('#')).toBe('');
+	  });
 })																														
